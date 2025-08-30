@@ -1,7 +1,17 @@
+import Link from "next/link";
+import { IoCardOutline } from "react-icons/io5";
 export default function EmptyPage() {
   return (
-    <div>
-      <h1>Empty page</h1>
+    <div className="flex justify-center items-center h-[800px]">
+      <IoCardOutline className="mx-5" size={80} />
+
+      <div className="flex flex-col items-center">
+        <h1 className="text-xl font-semibold">Tu carrito está vacío</h1>
+        
+        <Link href="/" className="text-blue-500 mt-2 text-4xl">
+          Regresar
+        </Link>
+      </div>
     </div>
   );
 }
